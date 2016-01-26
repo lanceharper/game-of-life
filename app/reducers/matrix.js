@@ -13,7 +13,7 @@ export default (state = resetMatrix(), action = null) => {
               return yCount;
             }
             if (typeof state[x+dx] === 'undefined' // Off the grid.
-							|| typeof state[x+dx][y+dy] === 'undefined') {
+	            || typeof state[x+dx][y+dy] === 'undefined') {
               return yCount;
             }
             if (!state[x+dx][y+dy]) { // Dead
