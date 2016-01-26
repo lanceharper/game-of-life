@@ -12,7 +12,7 @@ export const Game = ({ one, reset,start, stop, state }) => (
   <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
     <View>
       <Text>
-        Generations: { state.seconds }
+        Generations: { state.generations }
       </Text>
     </View>
     <Board matrix={ state.matrix }/>

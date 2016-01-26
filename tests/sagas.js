@@ -18,6 +18,7 @@ test('runOnce saga test', function (assert) {
   next = generator.next(actions.tick());
   assert.deepEqual(next.value, put(actions.tick()), 'must yield tick action');
 
+  assert.plan(2);
   assert.end();
 });
 
@@ -33,6 +34,7 @@ test('runTimer saga test running', function (assert) {
   next = generator.next(actions.tick());
   assert.deepEqual(next.value, put(actions.tick()), 'must yield tick action');
 
+  assert.plan(3);
   assert.end();
 });
 
@@ -48,5 +50,6 @@ test('runTimer saga test stopped', function (assert) {
   next = generator.next();
   assert.deepEqual(next.value, take('START'), 'must yield start action');
 
+  assert.plan(3);
   assert.end();
 });
